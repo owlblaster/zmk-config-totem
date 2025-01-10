@@ -39,14 +39,8 @@
             bindings = <&kp ESC>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 5>;
-        };
-
-        hyper {
-            bindings = <&hyper>;
+        hyper_space {
+            bindings = <&hyper_space>;
             key-positions = <34 36>;
         };
     };
@@ -127,6 +121,19 @@
                 <&kp LSHFT &kp LALT &kp LCTRL &kp LGUI>;
 
             label = "HYPER";
+        };
+
+        hyper_space: hyper_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LALT &kp LCTRL &kp LGUI &kp SPACE>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHFT &kp LALT &kp LCTRL &kp LGUI &kp SPACE>;
+
+            label = "HYPER_SPACE";
         };
     };
 
