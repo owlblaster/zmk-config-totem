@@ -49,32 +49,32 @@
 
         eqeq {
             bindings = <&eqeq>;
-            key-positions = <2 3>;
+            key-positions = <12 13>;
         };
 
         eq_sup {
             bindings = <&eq_sup>;
-            key-positions = <6 7>;
+            key-positions = <16 17>;
         };
 
         eqeqeq {
             bindings = <&eqeqeq>;
-            key-positions = <3 2 1>;
+            key-positions = <11 12 13>;
         };
 
         sup_eq {
             bindings = <&sup_eq>;
-            key-positions = <7 8>;
+            key-positions = <17 18>;
         };
 
         inf_eq {
             bindings = <&inf_eq>;
-            key-positions = <2 1>;
+            key-positions = <11 12>;
         };
 
-        eqeqeq2 {
-            bindings = <&eqeqeq>;
-            key-positions = <11 12 13>;
+        funcjs {
+            bindings = <&funcjs>;
+            key-positions = <16 17 18>;
         };
     };
 
@@ -207,6 +207,16 @@
             bindings = <&macro_tap>, <&kp LESS_THAN &kp EQUAL>;
 
             label = "INF_EQ";
+        };
+
+        funcjs: funcjs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp RBKT &kp RBRC>;
+
+            label = "FUNCJS";
         };
     };
 
