@@ -36,43 +36,37 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        hyper_space {
+        combo_hyper_space {
             bindings = <&hyper_space>;
             key-positions = <36 33>;
         };
 
-        eqeq {
+        combo_eqeq {
             bindings = <&eqeq>;
             key-positions = <12 13>;
         };
 
-        eq_sup {
+        combo_eq_sup {
             bindings = <&eq_sup>;
             key-positions = <16 17>;
         };
 
-        eqeqeq {
+        combo_eqeqeq {
             bindings = <&eqeqeq>;
             key-positions = <11 12 13>;
         };
 
-        sup_eq {
+        combo_sup_eq {
             bindings = <&sup_eq>;
             key-positions = <17 18>;
         };
 
-        inf_eq {
+        combo_inf_eq {
             bindings = <&inf_eq>;
             key-positions = <11 12>;
         };
 
-        funcjs {
+        combo_funcjs {
             bindings = <&funcjs>;
             key-positions = <16 17 18>;
         };
@@ -172,7 +166,7 @@
         eqeq: eqeq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL &kp SPACE>;
 
             label = "EQEQ";
         };
@@ -180,7 +174,7 @@
         eqeqeq: eqeqeq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL &kp EQUAL &kp SPACE>;
 
             label = "EQEQEQ";
         };
@@ -188,7 +182,7 @@
         eq_sup: eq_sup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp GT>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp GT &kp SPACE>;
 
             label = "EQ_SUP";
         };
@@ -196,7 +190,7 @@
         sup_eq: sup_eq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp GT &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp GT &kp EQUAL &kp SPACE>;
 
             label = "SUP_EQ";
         };
@@ -204,7 +198,7 @@
         inf_eq: inf_eq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LESS_THAN &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp LESS_THAN &kp EQUAL &kp SPACE>;
 
             label = "INF_EQ";
         };
@@ -214,7 +208,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp RBKT &kp RBRC>;
+                <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp RBRC>;
 
             label = "FUNCJS";
         };
@@ -355,6 +349,15 @@
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust {
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
     };
 };
