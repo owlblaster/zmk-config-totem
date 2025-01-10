@@ -41,7 +41,7 @@
 
         hyper_space {
             bindings = <&hyper_space>;
-            key-positions = <34 36>;
+            key-positions = <36 33>;
         };
     };
 
