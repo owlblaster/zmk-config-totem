@@ -61,6 +61,21 @@
             bindings = <&eqeqeq>;
             key-positions = <3 2 1>;
         };
+
+        sup_eq {
+            bindings = <&sup_eq>;
+            key-positions = <7 8>;
+        };
+
+        inf_eq {
+            bindings = <&inf_eq>;
+            key-positions = <2 1>;
+        };
+
+        eqeqeq2 {
+            bindings = <&eqeqeq>;
+            key-positions = <11 12 13>;
+        };
     };
 
     macros {
@@ -157,7 +172,7 @@
         eqeq: eqeq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL>, <&macro_tap>, <&kp EQUAL>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL>;
 
             label = "EQEQ";
         };
@@ -165,15 +180,33 @@
         eqeqeq: eqeqeq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL &kp EQUAL>;
+
             label = "EQEQEQ";
         };
 
         eq_sup: eq_sup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp GT>;
+
             label = "EQ_SUP";
+        };
+
+        sup_eq: sup_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GT &kp EQUAL>;
+
+            label = "SUP_EQ";
+        };
+
+        inf_eq: inf_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LESS_THAN &kp EQUAL>;
+
+            label = "INF_EQ";
         };
     };
 
