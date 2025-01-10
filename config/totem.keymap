@@ -157,7 +157,8 @@
         eqeq: eqeq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp EQUAL>, <&macro_tap>, <&kp EQUAL>;
+
             label = "EQEQ";
         };
 
