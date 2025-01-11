@@ -50,8 +50,8 @@
             key-positions = <23 24>;
         };
 
-        combo_eq_sup {
-            bindings = <&eq_sup>;
+        combo_not_eq {
+            bindings = <&not_eq>;
             key-positions = <27 28>;
         };
 
@@ -73,8 +73,8 @@
             timeout-ms = <100>;
         };
 
-        combo_funcjs {
-            bindings = <&funcjs>;
+        combo_not_eq_eq {
+            bindings = <&not_eq_eq>;
             key-positions = <27 28 29>;
             timeout-ms = <100>;
         };
@@ -170,8 +170,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "DOUBLE_KEY";
         };
@@ -268,6 +267,24 @@
                 <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp RBRC>;
 
             label = "FUNCJS";
+        };
+
+        not_eq: noteq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp EXCLAMATION &kp EQUAL &kp SPACE>;
+
+            label = "NOTEQ";
+        };
+
+        not_eq_eq: not_eq_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp EXCLAMATION &kp EQUAL &kp EQUAL &kp SPACE>;
+
+            label = "NOT_EQ_EQ";
         };
     };
 
