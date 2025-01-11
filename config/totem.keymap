@@ -156,6 +156,16 @@
             bindings = <&funcjs>;
             key-positions = <6 7 8>;
         };
+
+        combo_eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <13 24>;
+        };
+
+        combo_antislash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <30 29>;
+        };
     };
 
     macros {
