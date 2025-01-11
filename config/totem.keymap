@@ -132,12 +132,12 @@
         };
 
         combo_andand {
-            bindings = <&double AMPS>;
+            bindings = <&double_key AMPS>;
             key-positions = <6 7>;
         };
 
         combo_oror {
-            bindings = <&double PIPE>;
+            bindings = <&double_key PIPE>;
             key-positions = <3 2>;
         };
 
@@ -165,14 +165,15 @@
             label = "X_GRAVE";
         };
 
-        double: double {
+        double_key: double_key {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "DOUBLE";
+            label = "DOUBLE_KEY";
         };
 
         e_cute: e_cute {
