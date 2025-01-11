@@ -47,64 +47,74 @@
 
         combo_eqeq {
             bindings = <&eqeq>;
-            key-positions = <12 13>;
+            key-positions = <23 24>;
         };
 
         combo_eq_sup {
             bindings = <&eq_sup>;
-            key-positions = <16 17>;
+            key-positions = <27 28>;
         };
 
         combo_eqeqeq {
             bindings = <&eqeqeq>;
-            key-positions = <11 12 13>;
+            key-positions = <22 23 24>;
             timeout-ms = <100>;
         };
 
         combo_sup_eq {
             bindings = <&sup_eq>;
-            key-positions = <17 18>;
+            key-positions = <28 29>;
         };
 
         combo_inf_eq {
             bindings = <&inf_eq>;
-            key-positions = <11 12>;
+            key-positions = <22 23>;
         };
 
         combo_funcjs {
             bindings = <&funcjs>;
-            key-positions = <16 17 18>;
+            key-positions = <27 28 29>;
             timeout-ms = <100>;
         };
 
         combo_open_par {
             bindings = <&kp LPAR>;
-            key-positions = <0 1>;
+            key-positions = <12 11>;
         };
 
         compo_close_par {
             bindings = <&kp RPAR>;
-            key-positions = <8 9>;
+            key-positions = <17 18>;
         };
 
         combo_open_brace {
             bindings = <&kp LBRC>;
-            key-positions = <11 10>;
+            key-positions = <13 12>;
         };
 
         combo_close_brace {
             bindings = <&kp RBRC>;
-            key-positions = <19 18>;
+            key-positions = <16 17>;
         };
 
         combo_open_bracket {
             bindings = <&kp LBKT>;
-            key-positions = <21 22>;
+            key-positions = <13 12 11>;
         };
 
         combo_close_bracket {
             bindings = <&kp RBKT>;
-            key-positions = <30 29>;
+            key-positions = <16 17 18>;
+        };
+
+        combo_inf {
+            bindings = <&kp LT>;
+            key-positions = <13 14>;
+        };
+
+        combo_sup {
+            bindings = <&kp GT>;
+            key-positions = <15 16>;
         };
     };
 
