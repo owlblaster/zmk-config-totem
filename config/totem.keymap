@@ -79,9 +79,9 @@
     };
 
     macros {
-        e_grave: e_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        x_grave: x_grave {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -90,9 +90,10 @@
                 <&macro_release>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp E>;
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>;
 
-            label = "E_GRAVE";
+            label = "X_GRAVE";
         };
 
         e_cute: e_cute {
@@ -109,38 +110,6 @@
                 <&kp E>;
 
             label = "E_CUTE";
-        };
-
-        a_grave: a_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp GRAVE>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp A>;
-
-            label = "A_GRAVE";
-        };
-
-        u_grave: u_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp GRAVE>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp U>;
-
-            label = "U_GRAVE";
         };
 
         hyper: hyper {
@@ -271,10 +240,10 @@
 
         accent_layer {
             bindings = <
-        &trans    &e_cute  &e_grave              &trans     &trans    &trans          &u_grave   &trans  &kp LA(Q)  &trans
-        &a_grave  &trans   &kp LS(LA(NUMBER_2))  &kp LA(I)  &trans    &trans          &kp LA(U)  &trans  &trans     &trans
-&trans  &trans    &trans   &kp LA(C)             &trans     &trans    &kp LA(LS(N8))  &kp LA(M)  &trans  &trans     &trans  &trans
-                           &trans                &trans     &trans    &trans          &trans     &trans
+        &trans      &e_cute  &x_grave E            &trans     &trans    &trans          &x_grave U   &trans  &kp LA(Q)  &trans
+        &x_grave A  &trans   &kp LS(LA(NUMBER_2))  &kp LA(I)  &trans    &trans          &kp LA(U)    &trans  &trans     &trans
+&trans  &trans      &trans   &kp LA(C)             &trans     &trans    &kp LA(LS(N8))  &kp LA(M)    &trans  &trans     &trans  &trans
+                             &trans                &trans     &trans    &trans          &trans     &trans
             >;
         };
 
