@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
 
         combo_hyper_space {
-            bindings = <&hyper_space>;
+            bindings = <&x_f13 SPACE>;
             key-positions = <36 33>;
             timeout-ms = <100>;
         };
