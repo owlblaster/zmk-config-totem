@@ -166,6 +166,11 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <30 29>;
         };
+
+        combo_f13 {
+            bindings = <&kp F13>;
+            key-positions = <13 16>;
+        };
     };
 
     macros {
