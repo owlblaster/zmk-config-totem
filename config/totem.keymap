@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
 
         combo_hyper_space {
-            bindings = <&x_f13 SPACE>;
+            bindings = <&mo 7>;
             key-positions = <36 33>;
             timeout-ms = <100>;
         };
@@ -323,6 +323,18 @@
 
             label = "X_F13";
         };
+
+        x_f13_space: x_f13_space {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp F13 &kp SPACE>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "X_F13_SPACE";
+        };
     };
 
     keymap {
@@ -482,14 +494,23 @@
                             &trans    &trans    &trans      &trans    &trans    &trans
             >;
         };
+
+        LAYER_F13_SPACE {
+            bindings = <
+        &x_f13_space Q  &x_f13_space W  &x_f13_space E  &x_f13_space R  &x_f13_space T    &x_f13_space Y  &x_f13_space U  &x_f13_space I      &x_f13_space O    &x_f13_space P
+        &x_f13_space A  &x_f13_space S  &x_f13_space D  &x_f13_space F  &x_f13_space G    &x_f13_space H  &x_f13_space J  &x_f13_space K      &x_f13_space L    &x_f13_space SEMI
+&trans  &x_f13_space Z  &x_f13_space X  &x_f13_space C  &x_f13_space V  &x_f13_space B    &x_f13_space N  &x_f13_space M  &x_f13_space COMMA  &x_f13_space DOT  &x_f13_space FSLH  &trans
+                                        &trans          &trans          &trans            &trans          &trans          &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjust {
-            if-layers = <SYM FUNC>;
-            then-layer = <ADJ>;
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
     };
 };
