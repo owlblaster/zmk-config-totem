@@ -516,10 +516,10 @@
 
         LAYER_F14 {
             bindings = <
-        &x_f14 Q  &x_f14 W  &x_f14 E  &x_f14 R  &x_f14 T    &x_f14 Y  &x_f14 U  &x_f14 I      &x_f14 O    &x_f14 P
-        &x_f14 A  &x_f14 S  &x_f14 D  &x_f14 F  &x_f14 G    &x_f14 H  &x_f14 J  &x_f14 K      &x_f14 L    &x_f14 SEMI
-&trans  &x_f14 Z  &x_f14 X  &x_f14 C  &x_f14 V  &x_f14 B    &x_f14 N  &x_f14 M  &x_f14 COMMA  &x_f14 DOT  &x_f14 FSLH  &trans
-                            &trans    &trans    &trans      &trans    &trans    &trans
+        &x_f14 Q  &x_f14 W  &x_f14 E  &x_f14 R  &x_f14 T    &x_f14 Y    &x_f14 U      &x_f14 I      &x_f14 O    &x_f14 P
+        &x_f14 A  &x_f14 S  &x_f14 D  &x_f14 F  &x_f14 G    &x_f14 H    &x_f14 J      &x_f14 K      &x_f14 L    &x_f14 SEMI
+&trans  &x_f14 Z  &x_f14 X  &x_f14 C  &x_f14 V  &x_f14 B    &x_f14 N    &x_f14 M      &x_f14 COMMA  &x_f14 DOT  &x_f14 FSLH  &trans
+                            &trans    &trans    &trans      &x_f14 RET  &x_f14 SPACE  &x_f14 BSPC
             >;
         };
     };
