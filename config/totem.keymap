@@ -333,6 +333,18 @@
 
             label = "X_F13_SPACE";
         };
+
+        x_f14: xf14 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp F14>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "XF14";
+        };
     };
 
     keymap {
@@ -360,7 +372,7 @@
          &kp Q       &kp W       &kp E        &kp R          &kp T        &kp Y        &kp U        &kp I            &kp O       &kp P
          &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F    &kp G        &kp H        &mt RCTRL J  &mt RSHFT K      &mt RALT L  &mt RGUI SEMI
 &kp F14  &kp Z       &kp X       &kp C        &kp V          &kp B        &kp N        &kp M        &kp COMMA        &kp DOT     &kp FSLH       &kp F13
-                                 &lt 2 DEL    &mt LSHFT ESC  &lt 4 TAB    &lt 3 ENTER  &lt 6 SPACE  &lt 1 BACKSPACE
+                                 &lt 2 DEL    &mt LSHFT ESC  &lt 8 TAB    &lt 3 ENTER  &lt 6 SPACE  &lt 1 BACKSPACE
             >;
         };
 
@@ -499,6 +511,15 @@
         &x_f13_space A  &x_f13_space S  &x_f13_space D  &x_f13_space F  &x_f13_space G    &x_f13_space H  &x_f13_space J  &x_f13_space K      &x_f13_space L    &x_f13_space SEMI
 &trans  &x_f13_space Z  &x_f13_space X  &x_f13_space C  &x_f13_space V  &x_f13_space B    &x_f13_space N  &x_f13_space M  &x_f13_space COMMA  &x_f13_space DOT  &x_f13_space FSLH  &trans
                                         &trans          &trans          &trans            &trans          &trans          &trans
+            >;
+        };
+
+        LAYER_F14 {
+            bindings = <
+        &x_f14 Q  &x_f14 W  &x_f14 E  &x_f14 R  &x_f14 T    &x_f14 Y  &x_f14 U  &x_f14 I      &x_f14 O    &x_f14 P
+        &x_f14 A  &x_f14 S  &x_f14 D  &x_f14 F  &x_f14 G    &x_f14 H  &x_f14 J  &x_f14 K      &x_f14 L    &x_f14 SEMI
+&trans  &x_f14 Z  &x_f14 X  &x_f14 C  &x_f14 V  &x_f14 B    &x_f14 N  &x_f14 M  &x_f14 COMMA  &x_f14 DOT  &x_f14 FSLH  &trans
+                            &trans    &trans    &trans      &trans    &trans    &trans
             >;
         };
     };
