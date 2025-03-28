@@ -334,12 +334,12 @@
             label = "X_F13_SPACE";
         };
 
-        x_f14: xf14 {
+        x_f16: xf14 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&kp F14>,
+                <&kp F16>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
@@ -369,10 +369,10 @@
             //                                                 ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q       &kp W       &kp E        &kp R          &kp T        &kp Y        &kp U        &kp I            &kp O       &kp P
-         &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F    &kp G        &kp H        &mt RCTRL J  &mt RSHFT K      &mt RALT L  &mt RGUI SEMI
-&kp F14  &kp Z       &kp X       &kp C        &kp V          &kp B        &kp N        &kp M        &kp COMMA        &kp DOT     &kp FSLH       &kp F13
-                                 &lt 2 DEL    &mt LSHFT ESC  &lt 8 TAB    &lt 3 ENTER  &lt 6 SPACE  &lt 1 BACKSPACE
+          &kp Q       &kp W       &kp E        &kp R          &kp T        &kp Y        &kp U        &kp I            &kp O       &kp P
+          &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F    &kp G        &kp H        &mt RCTRL J  &mt RSHFT K      &mt RALT L  &mt RGUI SEMI
+&kp CAPS  &kp Z       &kp X       &kp C        &kp V          &kp B        &kp N        &kp M        &kp COMMA        &kp DOT     &kp FSLH       &kp RCTRL
+                                  &lt 2 DEL    &mt LSHFT ESC  &lt 8 TAB    &lt 3 ENTER  &lt 6 SPACE  &lt 1 BACKSPACE
             >;
         };
 
@@ -514,12 +514,12 @@
             >;
         };
 
-        LAYER_F14 {
+        LAYER_F16 {
             bindings = <
-        &x_f14 Q  &x_f14 W  &x_f14 E  &x_f14 R  &x_f14 T    &x_f14 Y    &x_f14 U      &x_f14 I      &x_f14 O    &x_f14 P
-        &x_f14 A  &x_f14 S  &x_f14 D  &x_f14 F  &x_f14 G    &x_f14 H    &x_f14 J      &x_f14 K      &x_f14 L    &x_f14 SEMI
-&trans  &x_f14 Z  &x_f14 X  &x_f14 C  &x_f14 V  &x_f14 B    &x_f14 N    &x_f14 M      &x_f14 COMMA  &x_f14 DOT  &x_f14 FSLH  &trans
-                            &trans    &trans    &trans      &x_f14 RET  &x_f14 SPACE  &x_f14 BSPC
+        &x_f16 Q  &x_f16 W  &x_f16 E  &x_f16 R  &x_f16 T    &x_f16 Y    &x_f16 U      &x_f16 I      &x_f16 O    &x_f16 P
+        &x_f16 A  &x_f16 S  &x_f16 D  &x_f16 F  &x_f16 G    &x_f16 H    &x_f16 J      &x_f16 K      &x_f16 L    &x_f16 SEMI
+&trans  &x_f16 Z  &x_f16 X  &x_f16 C  &x_f16 V  &x_f16 B    &x_f16 N    &x_f16 M      &x_f16 COMMA  &x_f16 DOT  &x_f16 FSLH  &trans
+                            &trans    &trans    &trans      &x_f16 RET  &x_f16 SPACE  &x_f16 BSPC
             >;
         };
     };
