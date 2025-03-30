@@ -441,9 +441,9 @@
             //                                                 ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
 
             bindings = <
-        &trans      &e_cute  &x_grave E            &trans     &trans    &trans          &x_grave U  &trans  &kp LA(Q)  &trans
-        &x_grave A  &trans   &kp LS(LA(NUMBER_2))  &kp LA(I)  &trans    &trans          &kp LA(U)   &trans  &trans     &trans
-&trans  &trans      &trans   &kp LA(C)             &trans     &trans    &kp LA(LS(N8))  &kp LA(M)   &trans  &trans     &trans  &trans
+        &trans      &e_cute  &x_grave E            &trans     &trans    &trans          &x_grave U  &trans  &kp RA(Q)  &trans
+        &x_grave A  &trans   &kp RA(RS(NUMBER_2))  &kp RA(I)  &trans    &trans          &kp RA(U)   &trans  &trans     &trans
+&trans  &trans      &trans   &kp RA(C)             &trans     &trans    &kp RA(RS(N8))  &kp RA(M)   &trans  &trans     &trans  &trans
                              &trans                &trans     &trans    &trans          &trans      &trans
             >;
         };
