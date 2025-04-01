@@ -79,12 +79,12 @@
 
         combo_open_par {
             bindings = <&kp LPAR>;
-            key-positions = <12 11>;
+            key-positions = <12 11 13>;
         };
 
         compo_close_par {
             bindings = <&kp RPAR>;
-            key-positions = <17 18>;
+            key-positions = <17 18 16>;
         };
 
         combo_open_brace {
@@ -99,13 +99,13 @@
 
         combo_open_bracket {
             bindings = <&kp LBKT>;
-            key-positions = <13 12 11>;
+            key-positions = <12 11>;
             timeout-ms = <100>;
         };
 
         combo_close_bracket {
             bindings = <&kp RBKT>;
-            key-positions = <16 17 18>;
+            key-positions = <17 18>;
             timeout-ms = <100>;
         };
 
