@@ -417,10 +417,10 @@
             //                                                 ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
 
             bindings = <
-        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6    &kp F7         &kp F8       &kp F9     &kp F10
-        &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F11
-&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp INSERT    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp F12  &trans
-                                    &trans        &trans        &trans        &trans    &trans         &trans
+        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                      &kp F6    &kp F7         &kp F8       &kp F9     &kp F10
+        &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE                  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F11
+&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LS(LC(LG(NUMBER_4)))    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp F12  &trans
+                                    &trans        &trans        &trans                      &trans    &trans         &trans
             >;
         };
 
