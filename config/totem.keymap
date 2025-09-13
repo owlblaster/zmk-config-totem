@@ -327,7 +327,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&kp F13 &kp SPACE>,
+                <&kp F13 &kp HASH>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
